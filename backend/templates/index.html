@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간편 로그인</title>
+    <style>
+        body {
+            font-family: 'MoneygraphyRounded', Arial, sans-serif;
+            background-color: #f4f4f4; /* 하얀 배경 */
+            color: #000; /* 검정 글씨 */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            width: 500px;
+        }
+
+        .login-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .login-buttons img {
+            width: 100%;
+            max-width: 315px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-buttons">
+            <a href="{% url 'naver-login' %}">
+                <img src="../static/images/naver_login.png" alt="네이버 로그인">
+            </a>
+            <a href="{% url 'kakao-login' %}">
+                <img src="../static/images/kakao_login.png" alt="카카오 로그인">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
